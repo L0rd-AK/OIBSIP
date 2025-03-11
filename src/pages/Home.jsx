@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "./Footer";
 import Navbar from "./Nvabar";
 
@@ -22,9 +23,11 @@ const Home = () => {
           Handcrafted with love, topped with premium ingredients
         </p>
         <div className="flex justify-center space-x-4">
+          <Link to='/custom-pizza'>
           <button className="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition-all duration-300 transform hover:scale-105">
             Order Now
           </button>
+          </Link>
           <button className="bg-transparent text-white px-8 py-3 rounded-full border-2 border-white hover:bg-white hover:text-red-600 transition-all duration-300 transform hover:scale-105">
             Learn More
           </button>

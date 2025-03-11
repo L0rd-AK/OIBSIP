@@ -9,6 +9,8 @@ import App from './App.jsx'
 import Login from "./pages/Login.jsx";
 import Home from "./pages/Home.jsx";
 import Register from "./pages/Register.jsx";
+import ForgotPassword from "./pages/ForgotPassword.jsx";
+import CustomPizza from "./pages/CustomPizza.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register/>,
+      },
+      {
+        path: '/forgot-password',
+        element: <ForgotPassword/>,
+      },
+      {
+        path: '/custom-pizza',
+        element: <CustomPizza/>,
       }
     ]
   },

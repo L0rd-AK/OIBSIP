@@ -29,10 +29,10 @@ const Navbar = () => {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="/menu">Menu</a>
               </li>
               <li>
-                <a href="/menu">Menu</a>
+                <a href="/about">About</a>
               </li>
               <li>
                 <a href="/contact">Contact</a>
@@ -51,13 +51,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:text-red-600 font-bold">
-                About
+              <a href="/menu" className="hover:text-red-600 font-bold">
+                Menu
               </a>
             </li>
             <li>
-              <a href="/menu" className="hover:text-red-600 font-bold">
-                Menu
+              <a href="/about" className="hover:text-red-600 font-bold">
+                About
               </a>
             </li>
             <li>
