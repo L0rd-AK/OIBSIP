@@ -81,7 +81,7 @@ const CustomPizza = () => {
                     className={`p-4 border rounded-lg cursor-pointer transition-all ${
                       selections.base === base ? 'border-red-600 bg-red-50' : 'border-gray-200 hover:border-red-300'
                     }`}
-                    onClick={() => updateSelection('base', base)}
+                    onClick={() => updateSelection('sauce', base)}
                   >
                     <div>
                         <img className="h-40 bg-gray-200 rounded-lg mb-4 w-full object-cover" src="./sauce.jpg" alt="" srcset="" />
