@@ -6,18 +6,36 @@ const App = () => {
       <div className="min-h-screen flex flex-col">
       {/* Header & Navigation */}
       <header className="bg-white shadow-md fixed w-full z-10">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="logo">
-            <h1 className="text-3xl font-bold text-red-600">Pizza Express</h1>
+        {/* Header & Navigation */}
+      <div className="navbar bg-white text-black shadow-md fixed w-full z-10">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/menu">Menu</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
           </div>
-          <nav className="hidden md:flex space-x-6">
-            <a href="/" className="text-gray-700 hover:text-red-600">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-red-600">About</a>
-            <a href="/menu" className="text-gray-700 hover:text-red-600">Menu</a>
-            <a href="/contact" className="text-gray-700 hover:text-red-600">Contact</a>
-            <a href="/login" className="text-gray-700 hover:text-red-600">Login</a>
-          </nav>
+          <a className="btn btn-ghost text-xl text-red-600 font-bold">Pizza Express</a>
         </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li><a href="/" className="hover:text-red-600">Home</a></li>
+            <li><a href="/about" className="hover:text-red-600">About</a></li>
+            <li><a href="/menu" className="hover:text-red-600">Menu</a></li>
+            <li><a href="/contact" className="hover:text-red-600">Contact</a></li>
+          </ul>
+        </div>
+        <div className="navbar-end">
+          <a href="/login" className="btn btn-ghost rounded-lg border-none bg-amber-600 text-white hover:font-bold">Login</a>
+        </div>
+      </div>
       </header>
 
       {/* Hero Section */}
@@ -30,7 +48,8 @@ const App = () => {
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
-        <div className="container mx-auto px-4 py-20 text-center relative z-10">
+        <div className='md:mt-20'>
+        <div className="container mx-auto px-4 py-20 text-center relative ">
           <h1 className="text-5xl font-bold text-white mb-8">Customize Your Perfect Pizza!</h1>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Handcrafted with love, topped with premium ingredients
@@ -43,6 +62,7 @@ const App = () => {
               Learn More
             </button>
           </div>
+        </div>
         </div>
       </section>
       {/* Popular Pizzas Section */}
