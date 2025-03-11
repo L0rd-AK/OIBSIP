@@ -114,6 +114,48 @@ const CustomPizza = () => {
                 ))}
               </div>
             )}
+            {/* Pizza Veggies section */}
+            {currentStep === 4 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {["Bell Peppers", "Mushrooms", "Olives", "Red Onions"].map((base) => (
+                  <div
+                    key={base}
+                    className={`p-4 border rounded-lg cursor-pointer transition-all ${
+                      selections.base === base ? 'border-red-600 bg-red-50' : 'border-gray-200 hover:border-red-300'
+                    }`}
+                    onClick={() => updateSelection('Veggies', base)}
+                  >
+                    <div>
+                        <img className="h-40 bg-gray-200 rounded-lg mb-4 w-full object-cover" src="./veggies.jpg" alt="" srcset="" />
+                    </div>
+                    <h3 className="font-semibold">{base}</h3>
+                    <p className="text-sm text-gray-600">Description for {base}</p>
+                    <p className="text-red-600 font-semibold mt-2">₹199</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {/* Pizza Meat section */}
+            {currentStep === 5 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {["Pepperoni", "Sausage", "Grilled Chicken", "Bacon", "Ham"].map((base) => (
+                  <div
+                    key={base}
+                    className={`p-4 border rounded-lg cursor-pointer transition-all ${
+                      selections.base === base ? 'border-red-600 bg-red-50' : 'border-gray-200 hover:border-red-300'
+                    }`}
+                    onClick={() => updateSelection('Meat', base)}
+                  >
+                    <div>
+                        <img className="h-40 bg-gray-200 rounded-lg mb-4 w-full object-cover" src="./meat.jpg" alt="" srcset="" />
+                    </div>
+                    <h3 className="font-semibold">{base}</h3>
+                    <p className="text-sm text-gray-600">Description for {base}</p>
+                    <p className="text-red-600 font-semibold mt-2">₹199</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Summary Sidebar */}
