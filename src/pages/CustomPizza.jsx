@@ -72,7 +72,7 @@ const CustomPizza = () => {
                 ))}
               </div>
             )}
-            {/* Add similar sections for other steps */}
+            {/* Pizza sauce section */}
             {currentStep === 2 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {["Tomato Basil", "Garlic Parmesan", "Barbecue", "Pesto", "Spicy Marinara"].map((base) => (
@@ -85,6 +85,27 @@ const CustomPizza = () => {
                   >
                     <div>
                         <img className="h-40 bg-gray-200 rounded-lg mb-4 w-full object-cover" src="./sauce.jpg" alt="" srcset="" />
+                    </div>
+                    <h3 className="font-semibold">{base}</h3>
+                    <p className="text-sm text-gray-600">Description for {base}</p>
+                    <p className="text-red-600 font-semibold mt-2">₹199</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {/* Pizza Cheese section */}
+            {currentStep === 3 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {["Mozzarella", "Cheddar", "Parmesan", "Provolone", "Gorgonzola", "Ricotta"].map((base) => (
+                  <div
+                    key={base}
+                    className={`p-4 border rounded-lg cursor-pointer transition-all ${
+                      selections.base === base ? 'border-red-600 bg-red-50' : 'border-gray-200 hover:border-red-300'
+                    }`}
+                    onClick={() => updateSelection('Cheese', base)}
+                  >
+                    <div>
+                        <img className="h-40 bg-gray-200 rounded-lg mb-4 w-full object-cover" src="./cheese.jpg" alt="" srcset="" />
                     </div>
                     <h3 className="font-semibold">{base}</h3>
                     <p className="text-sm text-gray-600">Description for {base}</p>
